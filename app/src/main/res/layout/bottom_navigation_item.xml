@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layMainItem"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/_58sdp"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/imgMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toTopOf="@+id/txtMenuName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_home" />
+
+    <TextView
+        android:id="@+id/txtMenuName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toTopOf="@+id/selectionView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgMenu"
+        tools:text="Home" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_4sdp"
+        android:background="@color/bottom_navigation_selected_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMenuName"
+        android:id="@+id/selectionView"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

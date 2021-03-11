@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.75">
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/img_phone"
+            android:src="@drawable/ic_smartphone"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_welcome"
+            android:text="@string/welcome_to_genetic_world"
+            android:textSize="@dimen/_20ssp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/img_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
+            android:id="@+id/title"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/enter_mobile"
+            android:textSize="@dimen/_13ssp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/black" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/phone_cl"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/ic_rectangle_1"
+            app:layout_constraintTop_toBottomOf="@+id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+91"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="@color/black"
+                android:id="@+id/tv_cc"
+                android:fontFamily="@font/montserrat_medium"
+                android:includeFontPadding="false"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"/>
+
+            <View
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.80"
+                android:background="#C9C8C8"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_cc"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:id="@+id/vies"/>
+
+            <EditText
+                android:id="@+id/edt_mobile"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/vies"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="@color/black"
+                android:background="@android:color/transparent"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:hint="@string/enter_your_number"
+                android:textColorHint="#AEAEAE"
+                android:gravity="center"
+                android:maxLength="10"
+                android:inputType="phone"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_submit"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="@dimen/_13ssp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_cl"
+            android:background="@drawable/ic_rectangle_2"
+            android:gravity="center"
+            android:id="@+id/btn_submit"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_20sdp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

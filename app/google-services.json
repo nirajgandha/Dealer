@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "786596414521",
+    "project_id": "dealer-3fb46",
+    "storage_bucket": "dealer-3fb46.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786596414521:android:30db2bca095ef3c73939e8",
+        "android_client_info": {
+          "package_name": "com.genetic.dealer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786596414521-o7hd9so1am2k66k5n0rqdq7tcgmed5v3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpUWY-6VOezY17Y92PJi2Q-5ZtxatQKHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786596414521-o7hd9so1am2k66k5n0rqdq7tcgmed5v3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

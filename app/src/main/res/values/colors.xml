@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#22AA53</color>
+    <color name="dark_green">#FF20B455</color>
+    <color name="light_green">#0DCF53</color>
+    <color name="bottom_navigation_bar_color">#F0FFAF</color>
+    <color name="bottom_navigation_selected_color">#21B355</color>
+    <color name="more_plus_color">#2561A1</color>
+    <color name="dashboard_color_order_text">#088B36</color>
+    <color name="product_option_dialog_title_background">#20B455</color>
+    <color name="product_option_dialog_background">#F0FFAF</color>
+</resources>

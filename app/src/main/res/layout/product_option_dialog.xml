@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/product_option_dialog_background"
+    android:paddingBottom="@dimen/_30sdp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Option"
+        android:id="@+id/select_option"
+        android:textColor="@color/black"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:gravity="center"
+        android:paddingTop="@dimen/_7sdp"
+        android:paddingBottom="@dimen/_7sdp"
+        android:textSize="@dimen/_16ssp"
+        android:background="@color/product_option_dialog_title_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rbtRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@+id/select_option"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancel"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.35"
+        android:text="Cancel"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnOk"
+        android:background="@drawable/ic_dialog_cancel_bg"
+        android:gravity="center"
+        android:paddingBottom="@dimen/_8sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:includeFontPadding="false"
+        android:id="@+id/btnCancel"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.35"
+        android:text="Add to cart"
+        android:fontFamily="@font/montserrat_bold"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/white"
+        android:includeFontPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ic_dialog_ok_bg"
+        android:gravity="center"
+        android:paddingBottom="@dimen/_8sdp"
+        android:paddingTop="@dimen/_8sdp"
+        android:id="@+id/btnOk"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
