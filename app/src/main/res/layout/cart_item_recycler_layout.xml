@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/_10sdp">
+
+    <include
+        android:id="@+id/round_img_layout"
+        layout="@layout/rounded_corner_imageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.17"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintTop_toTopOf="@+id/main"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/main"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/round_img_layout"
+        app:layout_constraintEnd_toStartOf="@+id/qtyll"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:id="@+id/product_title"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="#7F7E7D"
+            android:textSize="@dimen/_12ssp"
+            android:id="@+id/product_description"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\u20B9 3000"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:id="@+id/product_amount"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/qtyll"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_24sdp"
+        app:layout_constraintTop_toTopOf="@+id/round_img_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_10sdp">
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_subtract"
+            android:id="@+id/btnMinus"
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="12"
+            android:textSize="@dimen/_13ssp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_bold"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:id="@+id/qty"/>
+
+        <ImageView
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_add"
+            android:id="@+id/btnPlus"
+            android:background="@color/white" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:id="@+id/delete"
+        app:layout_constraintTop_toBottomOf="@+id/qtyll"
+        app:layout_constraintEnd_toEndOf="@+id/qtyll"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:src="@drawable/ic_trash" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

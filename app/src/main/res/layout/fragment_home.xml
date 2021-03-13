@@ -234,9 +234,9 @@
                     app:layout_constraintTop_toBottomOf="@+id/payment_history_head"
                     android:orientation="vertical">
 
-                    <include
+                    -<include
                         android:id="@+id/payment_history_dashboard_layout_1"
-                        layout="@layout/payment_history_dashboard_layout"/>
+                        layout="@layout/payment_history_dashboard_layout" />
 
                     <View
                         android:layout_width="match_parent"

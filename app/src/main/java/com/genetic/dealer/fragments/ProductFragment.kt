@@ -59,8 +59,9 @@ class ProductFragment : Fragment(), ProductItemClickListener, ProductOptionListe
     @SuppressLint("SetTextI18n")
     private fun loadData() {
         binding.toolbarLayout.toolbarNavButton.setOnClickListener { (requireActivity() as MainActivity).openDrawer() }
-        binding.toolbarLayout.screenTitle.text = resources.getString(R.string.menu_payment)
+        binding.toolbarLayout.screenTitle.text = resources.getString(R.string.product_screen)
         binding.productRecyclerview.layoutManager = LinearLayoutManager(requireContext())
+        updateCartStatus()
         getProductListFromCategory()
     }
 
@@ -153,13 +154,32 @@ class ProductFragment : Fragment(), ProductItemClickListener, ProductOptionListe
                 val productOptionKey: String = "${productOption?.productId}-${productOption?.productName}-${productOption?.optionTitle}-${productOption?.id}"
                 val customProductModel = CustomProductOptionModel(productOption, 1)
                 ((requireActivity() as MainActivity).applicationContext as DealerApplication).getProductCartList().putIfAbsent(productOptionKey, customProductModel)
+                if(!((requireActivity() as MainActivity).applicationContext as DealerApplication).getKeyArrayList().contains(productOptionKey)) {
+                    ((requireActivity() as MainActivity).applicationContext as DealerApplication).getKeyArrayList().add(productOptionKey)
+                }
             }
+            updateCartStatus()
             printItemsInCart()
             dialog.dismiss()
         }
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.show()
+    }
+
+    private fun updateCartStatus() {
+        if (((requireActivity() as MainActivity).applicationContext as DealerApplication).getProductCartList().isNotEmpty()) {
+            binding.toolbarLayout.imgCart.visibility = View.VISIBLE
+            binding.toolbarLayout.cartCount.visibility = View.VISIBLE
+            binding.toolbarLayout.cartCount.text = ((requireActivity() as MainActivity).applicationContext as DealerApplication).getProductCartList().size.toString()
+            binding.toolbarLayout.imgCart.setOnClickListener {
+                (requireActivity() as MainActivity).openOtherFragment(CartFragment())
+            }
+        } else {
+            binding.toolbarLayout.imgCart.visibility = View.GONE
+            binding.toolbarLayout.cartCount.visibility = View.GONE
+            binding.toolbarLayout.cartCount.text = ""
+        }
     }
 
     private fun printItemsInCart() {

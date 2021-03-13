@@ -30,5 +30,7 @@
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
     <string name="amount_s">₹ %s</string>
+    <string name="product_screen">Product</string>
+    <string name="cart">Cart</string>
 
 </resources>

@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity(), ItemClickListener, NavigationDrawerIte
     private var doubleBackToExitPressedOnce = false
     private var navigationDrawerAdapter: NavigationDrawersAdapter? = null
     private var productCategoryArrayList: ArrayList<ProductCategoryItem> = ArrayList()
+    private var mProductCategory: ArrayList<String>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -193,8 +194,12 @@ class MainActivity : AppCompatActivity(), ItemClickListener, NavigationDrawerIte
         finish()
     }
 
-    fun backPressFromOtherFragment(){
-        onItemClick(getString(R.string.menu_home))
+    private fun backPressFromOtherFragment(){
+        if (selectedFragment is CartFragment) {
+            openProductFragment()
+        } else {
+            onItemClick(getString(R.string.menu_home))
+        }
     }
 
     fun openOtherFragment(fragment: Fragment) {
@@ -265,18 +270,22 @@ class MainActivity : AppCompatActivity(), ItemClickListener, NavigationDrawerIte
     }
 
     override fun onNavigationDrawerItemClick(productCategoryItem: ProductCategoryItem) {
-        val stringArrayList: ArrayList<String> = ArrayList()
-        stringArrayList.add(productCategoryItem.id.toString())
-        stringArrayList.add(productCategoryItem.name)
-        stringArrayList.add(productCategoryItem.order.toString())
-        stringArrayList.add(productCategoryItem.slug)
-        stringArrayList.add(productCategoryItem.parentId)
+        mProductCategory = ArrayList()
+        mProductCategory?.add(productCategoryItem.id.toString())
+        mProductCategory?.add(productCategoryItem.name)
+        mProductCategory?.add(productCategoryItem.order.toString())
+        mProductCategory?.add(productCategoryItem.slug)
+        mProductCategory?.add(productCategoryItem.parentId)
+        openProductFragment()
+        closeDrawer()
+    }
+
+    private fun openProductFragment() {
         val bundle = Bundle()
-        bundle.putStringArrayList(AppConstant.PRODUCT_CATEGORY, stringArrayList)
+        bundle.putStringArrayList(AppConstant.PRODUCT_CATEGORY, mProductCategory)
         val productFragment = ProductFragment()
         productFragment.arguments = bundle
         openOtherFragment(productFragment)
-        closeDrawer()
     }
 
     private fun showError(string: String) {
