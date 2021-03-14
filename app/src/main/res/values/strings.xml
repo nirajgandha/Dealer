@@ -23,13 +23,14 @@
     <string name="menu_more">More</string>
     <string name="str_recent_order">Recent Order</string>
     <string name="str_more_plus">More+</string>
-    <string name="order_number">Order #1234</string>
+    <string name="order_number">Order #%s</string>
     <string name="sales_man_s">Sales Man: %s</string>
     <string name="str_type">Type: %s</string>
     <string name="str_payment_history">Payment History</string>
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
     <string name="amount_s">₹ %s</string>
+    <string name="discount_s">₹ %s</string>
     <string name="product_screen">Product</string>
     <string name="cart">Cart</string>
 

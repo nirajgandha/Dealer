@@ -35,6 +35,10 @@ class MoreFragment : Fragment() {
     private fun loadData() {
         binding.toolbarLayout.toolbarNavButton.setOnClickListener { (requireActivity() as MainActivity).openDrawer() }
         binding.toolbarLayout.screenTitle.text = resources.getString(R.string.menu_more)
-        binding.toolbarLayout.imgSearch.visibility = View.GONE
+        binding.myProfile.setOnClickListener { (requireActivity() as MainActivity).openOtherFragment(ProfileFragment()) }
+        binding.logout.setOnClickListener {
+            preference!!.clearAllPreferenceData()
+            (requireActivity() as MainActivity).recreate()
+        }
     }
 }

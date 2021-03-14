@@ -11,6 +11,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.genetic.dealer.R
 import com.genetic.dealer.adapter.MenuAdapter
@@ -59,7 +60,10 @@ class MainActivity : AppCompatActivity(), ItemClickListener, NavigationDrawerIte
         resumeFragment = getString(R.string.menu_home)
 
         navigationDrawerItemClickListener = this
-        binding.navigationDrawerRecyclerview.layoutManager = LinearLayoutManager(this)
+        val layoutManager = LinearLayoutManager(this)
+        val decorationItem = DividerItemDecoration(this, layoutManager.orientation)
+        binding.navigationDrawerRecyclerview.addItemDecoration(decorationItem)
+        binding.navigationDrawerRecyclerview.layoutManager = layoutManager
         navigationDrawerAdapter = NavigationDrawersAdapter(productCategoryArrayList, navigationDrawerItemClickListener!!, this)
         binding.navigationDrawerRecyclerview.adapter = navigationDrawerAdapter
 
@@ -195,10 +199,22 @@ class MainActivity : AppCompatActivity(), ItemClickListener, NavigationDrawerIte
     }
 
     private fun backPressFromOtherFragment(){
-        if (selectedFragment is CartFragment) {
-            openProductFragment()
-        } else {
-            onItemClick(getString(R.string.menu_home))
+        when (selectedFragment) {
+            is CartFragment -> {
+                openProductFragment()
+            }
+            is OrderDetailFragment -> {
+                onItemClick(getString(R.string.menu_order))
+            }
+            is PaymentDetailFragment -> {
+                onItemClick(getString(R.string.menu_payment))
+            }
+            is ProfileFragment -> {
+                onItemClick(getString(R.string.menu_more))
+            }
+            else -> {
+                onItemClick(getString(R.string.menu_home))
+            }
         }
     }
 

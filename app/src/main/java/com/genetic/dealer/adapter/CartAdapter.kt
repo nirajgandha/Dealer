@@ -3,10 +3,13 @@ package com.genetic.dealer.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.genetic.dealer.DealerApplication
+import com.genetic.dealer.R
 import com.genetic.dealer.databinding.CartItemRecyclerLayoutBinding
 import com.genetic.dealer.interfaces.CartProductListener
+import com.genetic.dealer.utils.GlideApp
 
 class CartAdapter(private val cartProductListener: CartProductListener, private val context: Context) : RecyclerView.Adapter<CartAdapter.ViewHolder?>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -46,6 +49,9 @@ class CartAdapter(private val cartProductListener: CartProductListener, private 
                 removeItems(key)
                 cartProductListener.cartProductUpdates(key, customProductOptionModel)
             }
+            GlideApp.with(context).load(customProductOptionModel.imageUrl)
+                .into(cartItemRecyclerLayoutBinding.roundImgLayout.roundedImageView)
+                .onLoadFailed(ResourcesCompat.getDrawable(context.resources, R.drawable.logo, context.theme))
 
         }
     }

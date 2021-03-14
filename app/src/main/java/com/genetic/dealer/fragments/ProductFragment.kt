@@ -103,13 +103,13 @@ class ProductFragment : Fragment(), ProductItemClickListener, ProductOptionListe
 
     override fun onProductItemClick(productListItem: ProductListItem) {
         Log.d("niraj",productListItem.toString())
-        getProductsOptionList(productListItem.id.toString())
+        getProductsOptionList(productListItem)
     }
 
-    private fun getProductsOptionList(productId: String) {
+    private fun getProductsOptionList(productListItem: ProductListItem) {
         Utils.showProgress(requireContext())
         APIClient.getApiInterface()
-            .getProductOptionList(preference?.getString(AppConstant.DEALER_ID, ""), productId)
+            .getProductOptionList(preference?.getString(AppConstant.DEALER_ID, ""), productListItem.id.toString())
             .enqueue(object : Callback<ProductOptionListResponse> {
                 override fun onResponse(call: Call<ProductOptionListResponse>,
                                         response: Response<ProductOptionListResponse>)
@@ -119,7 +119,7 @@ class ProductFragment : Fragment(), ProductItemClickListener, ProductOptionListe
                     if (body != null) {
                         val meta = body.meta
                         if (meta.code.equals("200")) {
-                            showProductOptionDialog(body.data)
+                            showProductOptionDialog(body.data, productListItem.image)
                         } else {
                             showError(meta.message)
                         }
@@ -139,7 +139,7 @@ class ProductFragment : Fragment(), ProductItemClickListener, ProductOptionListe
             })
     }
 
-    private fun showProductOptionDialog(productOptionList: ArrayList<ProductOption>) {
+    private fun showProductOptionDialog(productOptionList: ArrayList<ProductOption>, image: String) {
         val builder = AlertDialog.Builder(requireContext())
         val dialogBinding = ProductOptionDialogBinding.inflate(layoutInflater)
         builder.setView(dialogBinding.root)
@@ -152,7 +152,7 @@ class ProductFragment : Fragment(), ProductItemClickListener, ProductOptionListe
         dialogBinding.btnOk.setOnClickListener {
             if (productOption != null) {
                 val productOptionKey: String = "${productOption?.productId}-${productOption?.productName}-${productOption?.optionTitle}-${productOption?.id}"
-                val customProductModel = CustomProductOptionModel(productOption, 1)
+                val customProductModel = CustomProductOptionModel(productOption, 1, image)
                 ((requireActivity() as MainActivity).applicationContext as DealerApplication).getProductCartList().putIfAbsent(productOptionKey, customProductModel)
                 if(!((requireActivity() as MainActivity).applicationContext as DealerApplication).getKeyArrayList().contains(productOptionKey)) {
                     ((requireActivity() as MainActivity).applicationContext as DealerApplication).getKeyArrayList().add(productOptionKey)

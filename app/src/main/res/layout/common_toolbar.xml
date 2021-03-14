@@ -52,6 +52,7 @@
             android:id="@+id/img_search"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:visibility="invisible"
             app:layout_constraintHeight_percent="0.5"
             app:layout_constraintDimensionRatio="1:1"
             android:layout_marginEnd="@dimen/_10sdp"

@@ -33,10 +33,29 @@
         android:layout_gravity="start"
         android:background="@color/white">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/categories_tv"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/navigation_drawer_recyclerview">
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/navigation_drawer_recyclerview"
+            app:layout_constraintTop_toBottomOf="@+id/categories_tv"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:listitem="@layout/navigation_drawer_recyclerview_item">
+
+
 
         </androidx.recyclerview.widget.RecyclerView>
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -108,8 +108,6 @@ class LoginActivity : AppCompatActivity() {
             // Get new FCM registration token
             token = task.result.toString()
             Preference(this).setString(AppConstant.TOKEN, token.toString())
-            // Log and toast
-            Toast.makeText(baseContext, token, Toast.LENGTH_SHORT).show()
         })
     }
 }
