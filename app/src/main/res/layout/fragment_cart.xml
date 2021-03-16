@@ -43,7 +43,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:textColor="#7F7E7D"
                 android:fontFamily="@font/montserrat_regular"
-                android:textSize="@dimen/_12ssp"
+                android:textSize="@dimen/_10ssp"
                 android:id="@+id/tvCoupon" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -59,7 +59,7 @@
                     android:id="@+id/edt_code"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:textSize="@dimen/_10ssp"
+                    android:textSize="@dimen/_9ssp"
                     android:fontFamily="@font/montserrat_regular"
                     android:paddingTop="@dimen/_3sdp"
                     android:paddingBottom="@dimen/_3sdp"
@@ -80,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:text="Apply"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textSize="@dimen/_12ssp"
+                    android:textSize="@dimen/_10ssp"
                     android:textColor="@color/white"
                     android:includeFontPadding="false"
                     app:layout_constraintTop_toTopOf="parent"
@@ -107,7 +107,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:textColor="#7F7E7D"
                 android:fontFamily="@font/montserrat_regular"
-                android:textSize="@dimen/_12ssp"
+                android:textSize="@dimen/_10ssp"
                 android:id="@+id/tv_pay_detail" />
 
             <LinearLayout
@@ -129,13 +129,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.65"
                         android:text="Sub Total"
-                        android:paddingStart="@dimen/_12ssp"
+                        android:paddingStart="@dimen/_9ssp"
                         android:paddingTop="@dimen/_3sdp"
                         android:paddingBottom="@dimen/_3sdp"
                         android:paddingEnd="@dimen/_1sdp"
                         android:fontFamily="@font/montserrat_regular"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"/>
+                        android:textSize="@dimen/_9ssp"/>
 
                     <TextView
                         android:layout_width="0dp"
@@ -143,7 +143,7 @@
                         android:layout_weight="0.35"
                         android:fontFamily="@font/montserrat_regular"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"
+                        android:textSize="@dimen/_9ssp"
                         android:paddingTop="@dimen/_3sdp"
                         android:paddingBottom="@dimen/_3sdp"
                         android:paddingEnd="@dimen/_10sdp"
@@ -162,13 +162,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.65"
                         android:text="Tax"
-                        android:paddingStart="@dimen/_12ssp"
+                        android:paddingStart="@dimen/_12sdp"
                         android:paddingTop="@dimen/_3sdp"
                         android:paddingBottom="@dimen/_3sdp"
                         android:paddingEnd="@dimen/_1sdp"
                         android:fontFamily="@font/montserrat_regular"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"/>
+                        android:textSize="@dimen/_10ssp"/>
 
                     <TextView
                         android:layout_width="0dp"
@@ -176,7 +176,7 @@
                         android:layout_weight="0.35"
                         android:fontFamily="@font/montserrat_regular"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"
+                        android:textSize="@dimen/_10ssp"
                         android:paddingTop="@dimen/_3sdp"
                         android:paddingBottom="@dimen/_3sdp"
                         android:paddingEnd="@dimen/_10sdp"
@@ -195,13 +195,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.65"
                         android:text="Discount"
-                        android:paddingStart="@dimen/_12ssp"
+                        android:paddingStart="@dimen/_10ssp"
                         android:paddingTop="@dimen/_3sdp"
                         android:paddingBottom="@dimen/_3sdp"
                         android:paddingEnd="@dimen/_1sdp"
                         android:fontFamily="@font/montserrat_regular"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"/>
+                        android:textSize="@dimen/_10ssp"/>
 
                     <TextView
                         android:layout_width="0dp"
@@ -209,7 +209,7 @@
                         android:layout_weight="0.35"
                         android:fontFamily="@font/montserrat_regular"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"
+                        android:textSize="@dimen/_10ssp"
                         android:paddingTop="@dimen/_3sdp"
                         android:paddingBottom="@dimen/_3sdp"
                         android:paddingEnd="@dimen/_10sdp"
@@ -228,13 +228,13 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.65"
                         android:text="Delivery Charge"
-                        android:paddingStart="@dimen/_12ssp"
+                        android:paddingStart="@dimen/_12sdp"
                         android:paddingTop="@dimen/_3sdp"
                         android:paddingBottom="@dimen/_3sdp"
                         android:paddingEnd="@dimen/_1sdp"
                         android:fontFamily="@font/montserrat_regular"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"/>
+                        android:textSize="@dimen/_10ssp"/>
 
                     <TextView
                         android:layout_width="0dp"
@@ -242,7 +242,7 @@
                         android:layout_weight="0.35"
                         android:fontFamily="@font/montserrat_regular"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"
+                        android:textSize="@dimen/_10ssp"
                         android:paddingTop="@dimen/_3sdp"
                         android:paddingBottom="@dimen/_3sdp"
                         android:paddingEnd="@dimen/_10sdp"
@@ -270,13 +270,13 @@
                         android:layout_weight="0.65"
                         android:text="Total"
                         android:textStyle="bold"
-                        android:paddingStart="@dimen/_12ssp"
+                        android:paddingStart="@dimen/_10ssp"
                         android:paddingTop="@dimen/_3sdp"
                         android:paddingBottom="@dimen/_3sdp"
                         android:paddingEnd="@dimen/_1sdp"
                         android:fontFamily="@font/montserrat_regular"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"/>
+                        android:textSize="@dimen/_10ssp"/>
 
                     <TextView
                         android:layout_width="0dp"
@@ -284,7 +284,7 @@
                         android:layout_weight="0.35"
                         android:fontFamily="@font/montserrat_regular"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/_12ssp"
+                        android:textSize="@dimen/_10ssp"
                         android:paddingTop="@dimen/_3sdp"
                         android:paddingBottom="@dimen/_3sdp"
                         android:textStyle="bold"
@@ -316,7 +316,7 @@
                     android:layout_height="wrap_content"
                     android:text="Confirm and Payment"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_18ssp"
+                    android:textSize="@dimen/_16ssp"
                     android:includeFontPadding="false"
                     android:fontFamily="@font/montserrat_regular"
                     app:layout_constraintStart_toStartOf="parent"

@@ -40,14 +40,14 @@
                     <ImageView
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
-                        android:src="@color/green"
+                        android:src="@drawable/ic_my_profile"
                         android:contentDescription="@null"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="My Profile"
-                        android:textSize="@dimen/_14ssp"
+                        android:textSize="@dimen/_12ssp"
                         android:fontFamily="@font/montserrat_regular"
                         android:gravity="center"
                         android:layout_gravity="center"
@@ -75,14 +75,14 @@
                     <ImageView
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
-                        android:src="@color/green"
+                        android:src="@drawable/ic_change_password"
                         android:contentDescription="@null"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Change Password"
-                        android:textSize="@dimen/_14ssp"
+                        android:textSize="@dimen/_12ssp"
                         android:fontFamily="@font/montserrat_regular"
                         android:gravity="center"
                         android:layout_gravity="center"
@@ -101,7 +101,7 @@
                     android:text="Quickly Manage"
                     android:background="#3DFFC30A"
                     android:fontFamily="@font/montserrat_medium"
-                    android:textSize="@dimen/_14ssp"
+                    android:textSize="@dimen/_12ssp"
                     android:textColor="@color/black"
                     android:layout_marginTop="@dimen/_10sdp"/>
 
@@ -116,14 +116,14 @@
                     <ImageView
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
-                        android:src="@drawable/ic_order"
+                        android:src="@drawable/ic_more_orders"
                         android:contentDescription="@null"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/menu_order"
-                        android:textSize="@dimen/_14ssp"
+                        android:textSize="@dimen/_12ssp"
                         android:fontFamily="@font/montserrat_regular"
                         android:gravity="center"
                         android:layout_gravity="center"
@@ -151,14 +151,14 @@
                     <ImageView
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
-                        android:src="@drawable/ic_online_payment"
+                        android:src="@drawable/ic_payment_more"
                         android:contentDescription="@null"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/menu_payment"
-                        android:textSize="@dimen/_14ssp"
+                        android:textSize="@dimen/_12ssp"
                         android:fontFamily="@font/montserrat_regular"
                         android:gravity="center"
                         android:layout_gravity="center"
@@ -186,14 +186,14 @@
                     <ImageView
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
-                        android:src="@drawable/ic_online_payment"
+                        android:src="@drawable/ic_paid_history"
                         android:contentDescription="@null"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Paid History"
-                        android:textSize="@dimen/_14ssp"
+                        android:textSize="@dimen/_12ssp"
                         android:fontFamily="@font/montserrat_regular"
                         android:gravity="center"
                         android:layout_gravity="center"
@@ -221,14 +221,14 @@
                     <ImageView
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
-                        android:src="@drawable/ic_online_payment"
+                        android:src="@drawable/ic_due_history"
                         android:contentDescription="@null"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Due History"
-                        android:textSize="@dimen/_14ssp"
+                        android:textSize="@dimen/_12ssp"
                         android:fontFamily="@font/montserrat_regular"
                         android:gravity="center"
                         android:layout_gravity="center"
@@ -255,7 +255,7 @@
                     android:text="Contact"
                     android:background="#3DFFC30A"
                     android:fontFamily="@font/montserrat_medium"
-                    android:textSize="@dimen/_14ssp"
+                    android:textSize="@dimen/_12ssp"
                     android:textColor="@color/black"
                     android:layout_marginTop="@dimen/_10sdp"/>
 
@@ -270,14 +270,14 @@
                     <ImageView
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
-                        android:src="@color/green"
+                        android:src="@drawable/ic_contact"
                         android:contentDescription="@null"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Contact &amp; Support"
-                        android:textSize="@dimen/_14ssp"
+                        android:textSize="@dimen/_12ssp"
                         android:fontFamily="@font/montserrat_regular"
                         android:gravity="center"
                         android:layout_gravity="center"
@@ -305,14 +305,14 @@
                     <ImageView
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
-                        android:src="@color/green"
+                        android:src="@drawable/ic_signout"
                         android:contentDescription="@null"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sign Out"
-                        android:textSize="@dimen/_14ssp"
+                        android:textSize="@dimen/_12ssp"
                         android:fontFamily="@font/montserrat_regular"
                         android:gravity="center"
                         android:layout_gravity="center"

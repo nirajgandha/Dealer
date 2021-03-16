@@ -16,8 +16,84 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/product_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/_5sdp"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_layout"
+        app:layout_constraintBottom_toTopOf="@+id/submit_cl"
         tools:listitem="@layout/product_screen_recycler_item"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/submit_cl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingTop="@dimen/_7sdp"
+        android:paddingBottom="@dimen/_7sdp"
+        android:paddingStart="@dimen/_7sdp"
+        android:paddingEnd="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:background="@drawable/right_rounded_red_bg">
+
+        <TextView
+            android:layout_width="@dimen/_23sdp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_cp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/ic_ellipse_36"
+            android:includeFontPadding="true"
+            android:id="@+id/cart_count"
+            android:text="0"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:textSize="@dimen/_12ssp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subtotal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            android:includeFontPadding="false"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toEndOf="@+id/cart_count"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/tv_cp"/>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="@+id/tv_cp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_cp"
+            android:background="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/tv_cp"
+            android:layout_marginStart="@dimen/_8sdp"
+            app:layout_constraintEnd_toStartOf="@+id/subtotal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            android:includeFontPadding="false"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_regular"
+            app:layout_constraintStart_toEndOf="@+id/view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/subtotal"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

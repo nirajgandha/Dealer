@@ -40,7 +40,7 @@
             android:layout_marginEnd="@dimen/_5sdp"
             android:fontFamily="@font/montserrat_semi_bold"
             android:textColor="@color/black"
-            android:textSize="@dimen/_17ssp"
+            android:textSize="@dimen/_15ssp"
             tools:text="@string/menu_home"
             android:gravity="center"
             app:layout_constraintTop_toTopOf="parent"

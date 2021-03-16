@@ -62,7 +62,6 @@ class CartFragment: Fragment(), CartProductListener {
         binding.submitCl.setOnClickListener {
             callPlaceOrder()
         }
-        loadTotals()
     }
 
     private fun getTaxPercentage() {
@@ -83,17 +82,17 @@ class CartFragment: Fragment(), CartProductListener {
                         } else {
                             showError(meta.message)
                         }
-
                     } else {
                         showError(response.message())
                     }
-
+                    loadTotals()
                 }
 
                 override fun onFailure(call: Call<PercentageResponse>, t: Throwable) {
                     Utils.hideProgress()
                     showError("Error occurred!! Please try again later")
                     t.printStackTrace()
+                    loadTotals()
                 }
 
             })

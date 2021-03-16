@@ -24,7 +24,7 @@
                 android:id="@+id/order_no"
                 android:text="#1234 - "
                 android:fontFamily="@font/montserrat_bold"
-                android:textSize="@dimen/_12ssp"
+                android:textSize="@dimen/_10ssp"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -33,7 +33,7 @@
                 android:id="@+id/payment_type"
                 android:text="Debit Card - "
                 android:fontFamily="@font/montserrat_regular"
-                android:textSize="@dimen/_12ssp"
+                android:textSize="@dimen/_10ssp"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -42,8 +42,8 @@
                 android:id="@+id/amount"
                 android:textColor="@color/dashboard_color_order_text"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="Rs. 100.00"
-                android:textSize="@dimen/_12ssp"
+                android:text="@string/amount_s"
+                android:textSize="@dimen/_10ssp"
                 app:layout_constraintStart_toEndOf="@+id/round_img_layout"
                 app:layout_constraintTop_toTopOf="@+id/round_img_layout"/>
         </LinearLayout>
@@ -57,7 +57,7 @@
                 android:id="@+id/payment_date"
                 android:text="12th Jan 2021"
                 android:fontFamily="@font/montserrat_regular"
-                android:textSize="@dimen/_12ssp"
+                android:textSize="@dimen/_10ssp"
                 android:textColor="@color/black"/>
 
             <TextView
@@ -66,7 +66,7 @@
                 android:id="@+id/status"
                 android:text="Past Due"
                 android:fontFamily="@font/montserrat_semi_bold"
-                android:textSize="@dimen/_10ssp"
+                android:textSize="@dimen/_9ssp"
                 android:layout_marginStart="@dimen/_10sdp"
                 android:textColor="@android:color/holo_red_dark"/>
         </LinearLayout>

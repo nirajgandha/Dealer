@@ -95,7 +95,7 @@
                     android:id="@+id/print_invoice"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@color/product_option_dialog_title_background"
+                    android:background="@drawable/ic_dialog_cancel_bg"
                     android:orientation="horizontal"
                     android:layout_weight="0.47"
                     android:padding="@dimen/_8sdp"
@@ -124,7 +124,7 @@
                     android:id="@+id/email_invoice"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:background="@color/product_option_dialog_title_background"
+                    android:background="@drawable/ic_dialog_ok_bg"
                     android:orientation="horizontal"
                     android:layout_weight="0.47"
                     android:padding="@dimen/_8sdp"
@@ -152,12 +152,11 @@
             </LinearLayout>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background="@color/product_option_dialog_title_background"
-                android:paddingTop="@dimen/_7sdp"
-                android:paddingBottom="@dimen/_7sdp"
+                android:background="@drawable/ic_dialog_ok_bg"
+                android:padding="@dimen/_10sdp"
                 android:layout_margin="@dimen/_10sdp"
                 android:text="Back to Home"
                 android:textColor="@color/white"

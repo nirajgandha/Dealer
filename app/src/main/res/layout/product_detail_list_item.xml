@@ -20,25 +20,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
-                android:paddingTop="@dimen/_4sdp"
-                android:paddingBottom="@dimen/_3sdp"
                 android:text="Product Name"
                 android:textColor="#888888"
-                android:textSize="@dimen/_12ssp" />
+                android:textSize="@dimen/_10ssp" />
             <TextView
                 android:id="@+id/product_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
                 android:paddingStart="@dimen/_10sdp"
-                android:paddingTop="@dimen/_4sdp"
                 android:paddingEnd="@dimen/_10sdp"
-                android:paddingBottom="@dimen/_3sdp"
                 android:text="Urban Powder"
                 android:gravity="end"
                 android:layout_gravity="end"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_12ssp" />
+                android:textSize="@dimen/_10ssp" />
         </TableRow>
 
         <TableRow>
@@ -46,25 +42,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
-                android:paddingTop="@dimen/_4sdp"
-                android:paddingBottom="@dimen/_3sdp"
                 android:text="Qty"
                 android:textColor="#888888"
-                android:textSize="@dimen/_12ssp" />
+                android:textSize="@dimen/_10ssp" />
             <TextView
                 android:id="@+id/qty"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
                 android:paddingStart="@dimen/_10sdp"
-                android:paddingTop="@dimen/_4sdp"
                 android:paddingEnd="@dimen/_10sdp"
-                android:paddingBottom="@dimen/_3sdp"
                 android:text="2"
                 android:gravity="end"
                 android:layout_gravity="end"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_12ssp" />
+                android:textSize="@dimen/_10ssp" />
         </TableRow>
 
         <TableRow>
@@ -72,25 +64,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
-                android:paddingTop="@dimen/_4sdp"
-                android:paddingBottom="@dimen/_3sdp"
                 android:text="LTR"
                 android:textColor="#888888"
-                android:textSize="@dimen/_12ssp" />
+                android:textSize="@dimen/_10ssp" />
             <TextView
                 android:id="@+id/option_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
                 android:paddingStart="@dimen/_10sdp"
-                android:paddingTop="@dimen/_4sdp"
                 android:paddingEnd="@dimen/_10sdp"
-                android:paddingBottom="@dimen/_3sdp"
                 android:text="S"
                 android:gravity="end"
                 android:layout_gravity="end"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_12ssp" />
+                android:textSize="@dimen/_10ssp" />
         </TableRow>
 
         <TableRow>
@@ -98,25 +86,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
-                android:paddingTop="@dimen/_4sdp"
-                android:paddingBottom="@dimen/_3sdp"
                 android:text="Price"
                 android:textColor="#888888"
-                android:textSize="@dimen/_12ssp" />
+                android:textSize="@dimen/_10ssp" />
             <TextView
                 android:id="@+id/amount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
                 android:paddingStart="@dimen/_10sdp"
-                android:paddingTop="@dimen/_4sdp"
                 android:paddingEnd="@dimen/_10sdp"
-                android:paddingBottom="@dimen/_3sdp"
                 android:text="1000"
                 android:gravity="end"
                 android:layout_gravity="end"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_12ssp" />
+                android:textSize="@dimen/_10ssp" />
         </TableRow>
     </TableLayout>
 

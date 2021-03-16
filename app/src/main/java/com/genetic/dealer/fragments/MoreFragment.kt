@@ -36,6 +36,11 @@ class MoreFragment : Fragment() {
         binding.toolbarLayout.toolbarNavButton.setOnClickListener { (requireActivity() as MainActivity).openDrawer() }
         binding.toolbarLayout.screenTitle.text = resources.getString(R.string.menu_more)
         binding.myProfile.setOnClickListener { (requireActivity() as MainActivity).openOtherFragment(ProfileFragment()) }
+        binding.changePassword.setOnClickListener { (requireActivity() as MainActivity).openOtherFragment(ChangePasswordFragment()) }
+        binding.orders.setOnClickListener { (requireActivity() as MainActivity).onItemClick(resources.getString(R.string.menu_order)) }
+        binding.payment.setOnClickListener { (requireActivity() as MainActivity).onItemClick(resources.getString(R.string.menu_payment)) }
+        binding.paidHistory.setOnClickListener { (requireActivity() as MainActivity).onItemClick(resources.getString(R.string.menu_payment)) }
+        binding.dueHistory.setOnClickListener { (requireActivity() as MainActivity).onItemClick(resources.getString(R.string.menu_payment)) }
         binding.logout.setOnClickListener {
             preference!!.clearAllPreferenceData()
             (requireActivity() as MainActivity).recreate()

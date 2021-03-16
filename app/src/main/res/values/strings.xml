@@ -27,11 +27,14 @@
     <string name="sales_man_s">Sales Man: %s</string>
     <string name="str_type">Type: %s</string>
     <string name="str_payment_history">Payment History</string>
+    <string name="str_payment_due">Payment Due</string>
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
     <string name="amount_s">₹ %s</string>
     <string name="discount_s">₹ %s</string>
     <string name="product_screen">Product</string>
     <string name="cart">Cart</string>
+    <string name="remove_from_cart">Are you sure you want to remove %s from your cart?</string>
+    <string name="subtotal_s">Subtotal %s</string>
 
 </resources>

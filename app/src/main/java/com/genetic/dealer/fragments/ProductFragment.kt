@@ -180,6 +180,10 @@ class ProductFragment : Fragment(), ProductItemClickListener, ProductOptionListe
             binding.toolbarLayout.cartCount.visibility = View.GONE
             binding.toolbarLayout.cartCount.text = ""
         }
+        binding.submitCl.setOnClickListener {
+            (requireActivity() as MainActivity).openOtherFragment(CartFragment())
+        }
+        loadTotals()
     }
 
     private fun printItemsInCart() {
@@ -195,5 +199,21 @@ class ProductFragment : Fragment(), ProductItemClickListener, ProductOptionListe
 
     override fun onProductOptionClick(productOption: ProductOption) {
         this.productOption = productOption
+    }
+
+    private fun loadTotals() {
+        val cart = (requireContext().applicationContext as DealerApplication).getProductCartList()
+        var subtotal = 0.0
+        for (index in cart.entries) {
+            subtotal += (index.value.productOption.optionAmount * index.value.quantity)
+        }
+        binding.cartCount.text = cart.size.toString()
+        binding.subtotal.text = subtotal.toString()
+        if (cart.isEmpty()) {
+            binding.submitCl.visibility = View.GONE
+        } else {
+            binding.submitCl.visibility = View.VISIBLE
+        }
+
     }
 }

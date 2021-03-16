@@ -9,26 +9,33 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select Option"
-        android:id="@+id/select_option"
+        android:text="Remove product?"
+        android:id="@+id/title"
         android:textColor="@color/black"
         android:fontFamily="@font/montserrat_semi_bold"
         android:gravity="center"
         android:paddingTop="@dimen/_7sdp"
         android:paddingBottom="@dimen/_7sdp"
-        android:textSize="@dimen/_14ssp"
+        android:textSize="@dimen/_16ssp"
         android:background="@color/product_option_dialog_title_background"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rbtRecycler"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_100sdp"
-        android:layout_marginBottom="@dimen/_5sdp"
-        app:layout_constraintTop_toBottomOf="@+id/select_option"
-        app:layout_constraintBottom_toTopOf="@+id/btnCancel"/>
+        android:layout_height="wrap_content"
+        android:text="@string/remove_from_cart"
+        android:id="@+id/message"
+        android:textColor="@android:color/holo_red_light"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:paddingTop="@dimen/_7sdp"
+        android:paddingBottom="@dimen/_7sdp"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
         android:layout_width="0dp"
@@ -36,8 +43,9 @@
         app:layout_constraintWidth_percent="0.35"
         android:text="Cancel"
         android:fontFamily="@font/montserrat_bold"
-        android:textSize="@dimen/_10ssp"
+        android:textSize="@dimen/_12ssp"
         android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/message"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnOk"
@@ -54,7 +62,7 @@
         app:layout_constraintWidth_percent="0.35"
         android:text="Add to cart"
         android:fontFamily="@font/montserrat_bold"
-        android:textSize="@dimen/_10ssp"
+        android:textSize="@dimen/_12ssp"
         android:textColor="@color/white"
         android:includeFontPadding="false"
         app:layout_constraintBottom_toBottomOf="parent"

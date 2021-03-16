@@ -25,13 +25,12 @@ class PaymentAdapter(private var paymentItemArrayList: ArrayList<PaymentItem>, p
                 paymentScreenRecyclerItemBinding.orderNo.text = context.resources.getString(R.string.order_number, orderId)
                 paymentScreenRecyclerItemBinding.paymentAmount.text = context.resources.getString(R.string.amount_s,
                     totalAmount.toString())
-                paymentScreenRecyclerItemBinding.paymentDate.text = paymentDate.split(" ")[0]
-                paymentScreenRecyclerItemBinding.paymentType.text = type
-                paymentScreenRecyclerItemBinding.status.text = status
+                val date = paymentDate.split(" ")[0].split("-")
+                paymentScreenRecyclerItemBinding.paymentDate.text = "${date[2]}-${date[1]}-${date[0]}"
+                paymentScreenRecyclerItemBinding.status.text = type
                 paymentScreenRecyclerItemBinding.root.setOnClickListener {
                     paymentItemClickListener.onPaymentItemClick(this)
                 }
-                Log.d("Niraj", "loadDataFromResponse: $image")
                 if (image.isNotEmpty()) {
                     GlideApp.with(context)
                         .load(image)

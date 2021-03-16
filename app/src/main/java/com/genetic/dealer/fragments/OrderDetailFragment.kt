@@ -97,7 +97,7 @@ class OrderDetailFragment : Fragment() {
             prodBinding.productName.text = item.productName
             prodBinding.optionName.text = item.productOptionTitle
             prodBinding.qty.text = item.qty.toString()
-            prodBinding.amount.text = item.amount.toString()
+            prodBinding.amount.text = requireContext().resources.getString(R.string.amount_s, item.amount.toString())
             binding.productsListView.addView(prodBinding.root)
         }
 

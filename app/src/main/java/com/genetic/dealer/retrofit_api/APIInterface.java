@@ -72,4 +72,8 @@ public interface APIInterface {
                                            @Part("mobileno") RequestBody mobileno,
                                            @Part("dob") RequestBody dob,
                                            @Part MultipartBody.Part image);
+
+    @FormUrlEncoded
+    @POST(ServerConfig.GET_DASHBOARD)
+    Call<DashboardResponse> getDashboard(@Field("dealer_id") String dealer_id);
 }

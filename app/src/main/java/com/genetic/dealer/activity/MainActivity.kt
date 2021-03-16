@@ -70,7 +70,6 @@ class MainActivity : AppCompatActivity(), ItemClickListener, NavigationDrawerIte
         actionBarDrawerToggle = ActionBarDrawerToggle(this, binding.drawerLayout, R.string.drawer_open, R.string.drawer_close)
         binding.drawerLayout.setDrawerListener(actionBarDrawerToggle)
         getProductCategories()
-        loadData()
     }
 
     private fun getProductCategories() {
@@ -93,10 +92,10 @@ class MainActivity : AppCompatActivity(), ItemClickListener, NavigationDrawerIte
                         } else {
                             showError(meta.message)
                         }
-
                     } else {
                         showError(response.message())
                     }
+                    loadData()
 
                 }
 
@@ -104,6 +103,7 @@ class MainActivity : AppCompatActivity(), ItemClickListener, NavigationDrawerIte
                     Utils.hideProgress()
                     showError("Error occurred!! Please try again later")
                     t.printStackTrace()
+                    loadData()
                 }
 
             })
@@ -210,6 +210,9 @@ class MainActivity : AppCompatActivity(), ItemClickListener, NavigationDrawerIte
                 onItemClick(getString(R.string.menu_payment))
             }
             is ProfileFragment -> {
+                onItemClick(getString(R.string.menu_more))
+            }
+            is ChangePasswordFragment -> {
                 onItemClick(getString(R.string.menu_more))
             }
             else -> {

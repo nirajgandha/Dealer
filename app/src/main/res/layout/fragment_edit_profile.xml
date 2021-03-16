@@ -80,6 +80,7 @@
                     android:paddingBottom="@dimen/_7sdp"
                     android:textColor="@color/black"
                     android:textColorHint="#888888"
+                    android:inputType="phone"
                     android:textSize="@dimen/_10ssp" />
 
                 <EditText
@@ -99,6 +100,7 @@
                     android:paddingBottom="@dimen/_7sdp"
                     android:textColor="@color/black"
                     android:textColorHint="#888888"
+                    android:inputType="phone"
                     android:textSize="@dimen/_10ssp" />
 
                 <LinearLayout
@@ -145,7 +147,7 @@
                     android:gravity="center"
                     android:padding="@dimen/_10sdp"
                     android:textColor="@color/white"
-                    android:background="@color/product_option_dialog_title_background"
+                    android:background="@drawable/ic_rectangle_2"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_10sdp"

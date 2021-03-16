@@ -15,4 +15,5 @@ public class ServerConfig {
     static final String GET_TAX_PERCENTAGE = "getTaxPecentage";
     static final String GET_PROFILE = "getDealerDetail";
     static final String UPDATE_PROFILE = "updateProfile";
+    static final String GET_DASHBOARD = "getDealerDashboard";
 }
