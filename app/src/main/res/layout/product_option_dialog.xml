@@ -7,6 +7,7 @@
     android:background="@color/product_option_dialog_background"
     android:paddingBottom="@dimen/_30sdp">
     <TextView
+                    android:textAllCaps="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Select Option"
@@ -31,6 +32,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btnCancel"/>
 
     <TextView
+                    android:textAllCaps="true"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintWidth_percent="0.35"
@@ -49,6 +51,7 @@
         android:id="@+id/btnCancel"/>
 
     <TextView
+                    android:textAllCaps="true"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintWidth_percent="0.35"

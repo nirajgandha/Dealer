@@ -9,13 +9,13 @@ public class RecentOrder{
 	private OrderAmount orderAmount;
 
 	@SerializedName("order_list")
-	private ArrayList<OrderListItem> orderList;
+	private ArrayList<DashboardOrderListItem> orderList;
 
 	public OrderAmount getOrderAmount(){
 		return orderAmount;
 	}
 
-	public ArrayList<OrderListItem> getOrderList(){
+	public ArrayList<DashboardOrderListItem> getOrderList(){
 		return orderList;
 	}
 

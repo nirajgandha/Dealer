@@ -204,10 +204,12 @@ class ProductFragment : Fragment(), ProductItemClickListener, ProductOptionListe
     private fun loadTotals() {
         val cart = (requireContext().applicationContext as DealerApplication).getProductCartList()
         var subtotal = 0.0
+        var size = 0
         for (index in cart.entries) {
             subtotal += (index.value.productOption.optionAmount * index.value.quantity)
+            size += 1
         }
-        binding.cartCount.text = cart.size.toString()
+        binding.cartCounted.text = size.toString()
         binding.subtotal.text = subtotal.toString()
         if (cart.isEmpty()) {
             binding.submitCl.visibility = View.GONE

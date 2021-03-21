@@ -26,7 +26,7 @@ public class ProfileItem {
 	private String natureOfFirm;
 
 	@SerializedName("mobileno")
-	private int mobileno;
+	private String mobileno;
 
 	@SerializedName("residential_zipcode")
 	private String residentialZipcode;
@@ -215,7 +215,7 @@ public class ProfileItem {
 		return natureOfFirm;
 	}
 
-	public int getMobileno(){
+	public String getMobileno(){
 		return mobileno;
 	}
 

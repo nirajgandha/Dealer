@@ -2,10 +2,28 @@ package com.genetic.dealer.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class PaymentDetailItem{
+public class DashboardPaymentItem{
 
 	@SerializedName("image")
 	private String image;
+
+	@SerializedName("due_date")
+	private String dueDate;
+
+	@SerializedName("description")
+	private String description;
+
+	@SerializedName("created_at")
+	private String createdAt;
+
+	@SerializedName("type")
+	private String type;
+
+	@SerializedName("deleted_at")
+	private String deletedAt;
+
+	@SerializedName("order_ref_id")
+	private String orderRefId;
 
 	@SerializedName("updated_at")
 	private String updatedAt;
@@ -16,23 +34,11 @@ public class PaymentDetailItem{
 	@SerializedName("sale_man_id")
 	private int saleManId;
 
-	@SerializedName("description")
-	private String description;
-
-	@SerializedName("created_at")
-	private String createdAt;
-
 	@SerializedName("id")
 	private int id;
 
-	@SerializedName("type")
-	private String type;
-
 	@SerializedName("order_id")
 	private int orderId;
-
-	@SerializedName("deleted_at")
-	private String deletedAt;
 
 	@SerializedName("dealer_id")
 	private int dealerId;
@@ -42,6 +48,30 @@ public class PaymentDetailItem{
 
 	public String getImage(){
 		return image;
+	}
+
+	public String getDueDate(){
+		return dueDate;
+	}
+
+	public String getDescription(){
+		return description;
+	}
+
+	public String getCreatedAt(){
+		return createdAt;
+	}
+
+	public String getType(){
+		return type;
+	}
+
+	public String getDeletedAt(){
+		return deletedAt;
+	}
+
+	public String getOrderRefId(){
+		return orderRefId;
 	}
 
 	public String getUpdatedAt(){
@@ -56,28 +86,12 @@ public class PaymentDetailItem{
 		return saleManId;
 	}
 
-	public String getDescription(){
-		return description;
-	}
-
-	public String getCreatedAt(){
-		return createdAt;
-	}
-
 	public int getId(){
 		return id;
 	}
 
-	public String getType(){
-		return type;
-	}
-
 	public int getOrderId(){
 		return orderId;
-	}
-
-	public String getDeletedAt(){
-		return deletedAt;
 	}
 
 	public int getDealerId(){
@@ -91,17 +105,19 @@ public class PaymentDetailItem{
 	@Override
  	public String toString(){
 		return 
-			"PaymentDetailItem{" + 
+			"DashboardPaymentItem{" + 
 			"image = '" + image + '\'' + 
+			",due_date = '" + dueDate + '\'' + 
+			",description = '" + description + '\'' + 
+			",created_at = '" + createdAt + '\'' + 
+			",type = '" + type + '\'' + 
+			",deleted_at = '" + deletedAt + '\'' + 
+			",order_ref_id = '" + orderRefId + '\'' + 
 			",updated_at = '" + updatedAt + '\'' + 
 			",total_amount = '" + totalAmount + '\'' + 
 			",sale_man_id = '" + saleManId + '\'' + 
-			",description = '" + description + '\'' + 
-			",created_at = '" + createdAt + '\'' + 
 			",id = '" + id + '\'' + 
-			",type = '" + type + '\'' + 
 			",order_id = '" + orderId + '\'' + 
-			",deleted_at = '" + deletedAt + '\'' + 
 			",dealer_id = '" + dealerId + '\'' + 
 			",status = '" + status + '\'' + 
 			"}";

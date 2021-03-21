@@ -33,6 +33,7 @@
                 android:src="@drawable/ic_right_circle" />
 
             <TextView
+                    android:textAllCaps="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -43,6 +44,7 @@
 
 
             <TextView
+                    android:textAllCaps="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -65,6 +67,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:textAllCaps="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_semi_bold"
@@ -73,6 +76,7 @@
                     android:textSize="@dimen/_12ssp" />
 
                 <TextView
+                    android:textAllCaps="true"
                     android:id="@+id/total_order_amount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -89,7 +93,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_gravity="center"
-                android:weightSum="0.9">
+                android:weightSum="0.9"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:id="@+id/print_invoice"
@@ -109,6 +114,7 @@
                         android:layout_gravity="center"/>
 
                     <TextView
+                    android:textAllCaps="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Print Invoice"
@@ -138,6 +144,7 @@
                         android:layout_gravity="center" />
 
                     <TextView
+                    android:textAllCaps="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Email Invoice"
@@ -152,6 +159,7 @@
             </LinearLayout>
 
             <TextView
+                    android:textAllCaps="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"

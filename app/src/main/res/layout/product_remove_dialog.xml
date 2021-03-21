@@ -7,6 +7,7 @@
     android:background="@color/product_option_dialog_background"
     android:paddingBottom="@dimen/_30sdp">
     <TextView
+                    android:textAllCaps="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Remove product?"
@@ -23,6 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
+                    android:textAllCaps="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/remove_from_cart"
@@ -38,6 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
+                    android:textAllCaps="true"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintWidth_percent="0.35"
@@ -57,10 +60,11 @@
         android:id="@+id/btnCancel"/>
 
     <TextView
+                    android:textAllCaps="true"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintWidth_percent="0.35"
-        android:text="Add to cart"
+        android:text="Remove"
         android:fontFamily="@font/montserrat_bold"
         android:textSize="@dimen/_12ssp"
         android:textColor="@color/white"

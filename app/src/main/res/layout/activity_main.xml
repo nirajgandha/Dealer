@@ -41,6 +41,7 @@
             android:textSize="@dimen/_14ssp"
             android:textColor="@color/black"
             android:gravity="center"
+            android:textAllCaps="true"
             android:fontFamily="@font/montserrat_bold"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"

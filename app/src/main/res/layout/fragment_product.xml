@@ -37,6 +37,7 @@
         android:background="@drawable/right_rounded_red_bg">
 
         <TextView
+                    android:textAllCaps="true"
             android:layout_width="@dimen/_23sdp"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="1:1"
@@ -46,7 +47,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:background="@drawable/ic_ellipse_36"
             android:includeFontPadding="true"
-            android:id="@+id/cart_count"
+            android:id="@+id/cartCounted"
             android:text="0"
             android:textColor="@color/black"
             android:fontFamily="@font/montserrat_medium"
@@ -56,6 +57,7 @@
             android:textSize="@dimen/_12ssp"/>
 
         <TextView
+                    android:textAllCaps="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Subtotal"
@@ -63,7 +65,7 @@
             android:textSize="@dimen/_16ssp"
             android:includeFontPadding="false"
             android:fontFamily="@font/montserrat_regular"
-            app:layout_constraintStart_toEndOf="@+id/cart_count"
+            app:layout_constraintStart_toEndOf="@+id/cartCounted"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:id="@+id/tv_cp"/>
@@ -80,6 +82,7 @@
             app:layout_constraintEnd_toStartOf="@+id/subtotal"/>
 
         <TextView
+                    android:textAllCaps="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0.0"

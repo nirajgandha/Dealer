@@ -318,4 +318,9 @@ class MainActivity : AppCompatActivity(), ItemClickListener, NavigationDrawerIte
     fun closeDrawer() {
         binding.drawerLayout.closeDrawers()
     }
+
+    fun setProductCategory(mProductCategory: ArrayList<String>) {
+        this.mProductCategory = mProductCategory
+        openProductFragment()
+    }
 }

@@ -17,7 +17,6 @@ import com.genetic.dealer.databinding.CartItemRecyclerLayoutBinding
 import com.genetic.dealer.databinding.ProductOptionDialogBinding
 import com.genetic.dealer.databinding.ProductRemoveDialogBinding
 import com.genetic.dealer.interfaces.CartProductListener
-import com.genetic.dealer.model.CustomProductOptionModel
 import com.genetic.dealer.utils.GlideApp
 
 class CartAdapter(private val cartProductListener: CartProductListener, private val context: Context) : RecyclerView.Adapter<CartAdapter.ViewHolder?>() {
@@ -29,20 +28,23 @@ class CartAdapter(private val cartProductListener: CartProductListener, private 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder) {
             val key = (context.applicationContext as DealerApplication).getKeyArrayList()[position]
-            val customProductOptionModel = (context.applicationContext as DealerApplication).getProductCartList().getValue(key)
-            cartItemRecyclerLayoutBinding.productTitle.text = customProductOptionModel.productOption.productName
-            cartItemRecyclerLayoutBinding.productDescription.text = customProductOptionModel.productOption.categoryName
-            cartItemRecyclerLayoutBinding.productAmount.text = context.resources.getString(R.string.amount_s,customProductOptionModel.productOption.optionAmount.toString())
-            cartItemRecyclerLayoutBinding.qty.text = customProductOptionModel.quantity.toString()
+            cartItemRecyclerLayoutBinding.productTitle.text = (context.applicationContext as DealerApplication)
+                .getProductCartList().getValue(key).productOption.productName
+            cartItemRecyclerLayoutBinding.productDescription.text = (context.applicationContext as DealerApplication)
+                .getProductCartList().getValue(key).productOption.categoryName
+            cartItemRecyclerLayoutBinding.productAmount.text = context.resources.getString(R.string.amount_s,
+                (context.applicationContext as DealerApplication).getProductCartList().getValue(key).productOption.optionAmount.toString())
+            cartItemRecyclerLayoutBinding.qty.text = (context.applicationContext as DealerApplication)
+                .getProductCartList().getValue(key).quantity.toString()
             cartItemRecyclerLayoutBinding.btnMinus.setOnClickListener {
-                if (customProductOptionModel.quantity == 1) {
+                if ((context.applicationContext as DealerApplication).getProductCartList().getValue(key).quantity == 1) {
                     val builder = AlertDialog.Builder(context)
                     val dialogBinding = ProductRemoveDialogBinding.inflate(LayoutInflater.from(context))
                     builder.setView(dialogBinding.root)
                     val dialog = builder.create()
                     dialog.setCanceledOnTouchOutside(true)
                     dialog.setCancelable(true)
-                    dialogBinding.message.text = context.resources.getString(R.string.remove_from_cart, "${customProductOptionModel.productOption.productName} ${customProductOptionModel.productOption.optionTitle}")
+                    dialogBinding.message.text = context.resources.getString(R.string.remove_from_cart, "${(context.applicationContext as DealerApplication).getProductCartList().getValue(key).productOption.productName} ${(context.applicationContext as DealerApplication).getProductCartList().getValue(key).productOption.optionTitle}")
                     dialogBinding.btnCancel.setOnClickListener { dialog.dismiss() }
                     dialogBinding.btnOk.setOnClickListener {
                         removeItems(key)
@@ -53,26 +55,26 @@ class CartAdapter(private val cartProductListener: CartProductListener, private 
                     dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
                     dialog.show()
                 } else {
-                    customProductOptionModel.quantity = customProductOptionModel.quantity - 1
-                    (context.applicationContext as DealerApplication).getProductCartList()[key] =
-                        customProductOptionModel
-                    notifyDataSetChanged()
-                    cartProductListener.cartProductUpdates(key, customProductOptionModel)
+                    (context.applicationContext as DealerApplication).getProductCartList().getValue(key).quantity -= 1
+                    cartItemRecyclerLayoutBinding.qty.text = (context.applicationContext as DealerApplication).getProductCartList().getValue(key).quantity.toString()
+                    cartProductListener.cartProductUpdates(key,
+                        (context.applicationContext as DealerApplication).getProductCartList().getValue(key))
                 }
             }
             cartItemRecyclerLayoutBinding.btnPlus.setOnClickListener {
-                customProductOptionModel.quantity = customProductOptionModel.quantity + 1
-                (context.applicationContext as DealerApplication).getProductCartList()[key] =
-                        customProductOptionModel
-                cartProductListener.cartProductUpdates(key, customProductOptionModel)
-                notifyDataSetChanged()
+                (context.applicationContext as DealerApplication).getProductCartList().getValue(key).quantity += 1
+                cartItemRecyclerLayoutBinding.qty.text = (context.applicationContext as DealerApplication).getProductCartList().getValue(key).quantity.toString()
+                cartProductListener.cartProductUpdates(key,
+                    (context.applicationContext as DealerApplication).getProductCartList().getValue(key))
             }
 
             cartItemRecyclerLayoutBinding.delete.setOnClickListener {
                 removeItems(key)
-                cartProductListener.cartProductUpdates(key, customProductOptionModel)
+                cartProductListener.cartProductUpdates(key,
+                    (context.applicationContext as DealerApplication).getProductCartList().getValue(key))
             }
-            GlideApp.with(context).load(customProductOptionModel.imageUrl)
+            GlideApp.with(context).load(
+                (context.applicationContext as DealerApplication).getProductCartList().getValue(key).imageUrl)
                 .into(cartItemRecyclerLayoutBinding.roundImgLayout.roundedImageView)
                 .onLoadFailed(ResourcesCompat.getDrawable(context.resources, R.drawable.logo, context.theme))
 

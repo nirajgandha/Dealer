@@ -9,20 +9,20 @@ public class DashboardData {
 	private RecentOrder recentOrder;
 
 	@SerializedName("payment_history")
-	private ArrayList<PaymentHistoryItem> paymentHistory;
+	private ArrayList<DashboardPaymentItem> paymentHistory;
 
 	@SerializedName("payment_due")
-	private ArrayList<PaymentDueItem> paymentDue;
+	private ArrayList<DashboardPaymentItem> paymentDue;
 
 	public RecentOrder getRecentOrder(){
 		return recentOrder;
 	}
 
-	public ArrayList<PaymentHistoryItem> getPaymentHistory(){
+	public ArrayList<DashboardPaymentItem> getPaymentHistory(){
 		return paymentHistory;
 	}
 
-	public ArrayList<PaymentDueItem> getPaymentDue(){
+	public ArrayList<DashboardPaymentItem> getPaymentDue(){
 		return paymentDue;
 	}
 

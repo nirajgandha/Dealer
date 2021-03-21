@@ -44,6 +44,7 @@
                         android:contentDescription="@null"/>
 
                     <TextView
+                    android:textAllCaps="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="My Profile"
@@ -79,6 +80,7 @@
                         android:contentDescription="@null"/>
 
                     <TextView
+                    android:textAllCaps="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Change Password"
@@ -92,6 +94,7 @@
                 </LinearLayout>
 
                 <TextView
+                    android:textAllCaps="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="@dimen/_6sdp"
@@ -120,6 +123,7 @@
                         android:contentDescription="@null"/>
 
                     <TextView
+                    android:textAllCaps="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/menu_order"
@@ -155,6 +159,7 @@
                         android:contentDescription="@null"/>
 
                     <TextView
+                    android:textAllCaps="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/menu_payment"
@@ -190,6 +195,7 @@
                         android:contentDescription="@null"/>
 
                     <TextView
+                    android:textAllCaps="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Paid History"
@@ -225,6 +231,7 @@
                         android:contentDescription="@null"/>
 
                     <TextView
+                    android:textAllCaps="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Due History"
@@ -246,6 +253,7 @@
                     android:layout_marginEnd="@dimen/_10sdp"/>
 
                 <TextView
+                    android:textAllCaps="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="@dimen/_6sdp"
@@ -274,6 +282,7 @@
                         android:contentDescription="@null"/>
 
                     <TextView
+                    android:textAllCaps="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Contact &amp; Support"
@@ -309,6 +318,7 @@
                         android:contentDescription="@null"/>
 
                     <TextView
+                    android:textAllCaps="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sign Out"

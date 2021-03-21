@@ -35,7 +35,7 @@ public class OrderDetailItem{
 	private int salesPersonId;
 
 	@SerializedName("salesman_mobileno")
-	private int salesmanMobileno;
+	private String salesmanMobileno;
 
 	@SerializedName("dealer_id")
 	private int dealerId;
@@ -119,7 +119,7 @@ public class OrderDetailItem{
 		return salesPersonId;
 	}
 
-	public int getSalesmanMobileno(){
+	public String getSalesmanMobileno(){
 		return salesmanMobileno;
 	}
 

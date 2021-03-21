@@ -2,6 +2,8 @@ package com.genetic.dealer.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.math.BigInteger;
+
 public class PaymentDetail{
 
 	@SerializedName("image")
@@ -47,7 +49,7 @@ public class PaymentDetail{
 	private int orderId;
 
 	@SerializedName("salesman_mobileno")
-	private int salesmanMobileno;
+	private String salesmanMobileno;
 
 	@SerializedName("payment_date")
 	private String paymentDate;
@@ -114,7 +116,7 @@ public class PaymentDetail{
 		return orderId;
 	}
 
-	public int getSalesmanMobileno(){
+	public String getSalesmanMobileno(){
 		return salesmanMobileno;
 	}
 

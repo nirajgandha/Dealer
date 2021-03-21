@@ -17,6 +17,7 @@
         android:stretchColumns="1">
         <TableRow>
             <TextView
+                    android:textAllCaps="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
@@ -24,6 +25,7 @@
                 android:textColor="#888888"
                 android:textSize="@dimen/_10ssp" />
             <TextView
+                    android:textAllCaps="true"
                 android:id="@+id/product_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -39,6 +41,7 @@
 
         <TableRow>
             <TextView
+                    android:textAllCaps="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
@@ -46,6 +49,7 @@
                 android:textColor="#888888"
                 android:textSize="@dimen/_10ssp" />
             <TextView
+                    android:textAllCaps="true"
                 android:id="@+id/qty"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -61,6 +65,7 @@
 
         <TableRow>
             <TextView
+                    android:textAllCaps="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
@@ -68,6 +73,7 @@
                 android:textColor="#888888"
                 android:textSize="@dimen/_10ssp" />
             <TextView
+                    android:textAllCaps="true"
                 android:id="@+id/option_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,6 +89,7 @@
 
         <TableRow>
             <TextView
+                    android:textAllCaps="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
@@ -90,6 +97,7 @@
                 android:textColor="#888888"
                 android:textSize="@dimen/_10ssp" />
             <TextView
+                    android:textAllCaps="true"
                 android:id="@+id/amount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

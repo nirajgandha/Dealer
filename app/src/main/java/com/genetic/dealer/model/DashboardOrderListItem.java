@@ -2,16 +2,13 @@ package com.genetic.dealer.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public  class  OrderListItem{
+public  class DashboardOrderListItem {
 
 	@SerializedName("lr_upload")
 	private String lrUpload;
 
 	@SerializedName("product_name")
 	private String productName;
-
-	@SerializedName("product_option_title")
-	private String productOptionTitle;
 
 	@SerializedName("created_at")
 	private String createdAt;
@@ -22,14 +19,8 @@ public  class  OrderListItem{
 	@SerializedName("order_tax_amount")
 	private double orderTaxAmount;
 
-	@SerializedName("order_ref_id")
-	private int orderRefId;
-
 	@SerializedName("updated_at")
 	private String updatedAt;
-
-	@SerializedName("product_id")
-	private int productId;
 
 	@SerializedName("salesman_email")
 	private String salesmanEmail;
@@ -49,9 +40,6 @@ public  class  OrderListItem{
 	@SerializedName("order_total_amount")
 	private double orderTotalAmount;
 
-	@SerializedName("amount")
-	private double amount;
-
 	@SerializedName("salesman_code")
 	private String salesmanCode;
 
@@ -70,9 +58,6 @@ public  class  OrderListItem{
 	@SerializedName("total_amount")
 	private double totalAmount;
 
-	@SerializedName("qty")
-	private double qty;
-
 	@SerializedName("dealer_name")
 	private String dealerName;
 
@@ -84,10 +69,6 @@ public  class  OrderListItem{
 
 	public String getLrUpload(){
 		return lrUpload;
-	}
-
-	public String getProductOptionTitle(){
-		return productOptionTitle;
 	}
 
 	public String getCreatedAt(){
@@ -102,16 +83,8 @@ public  class  OrderListItem{
 		return orderTaxAmount;
 	}
 
-	public int getOrderRefId(){
-		return orderRefId;
-	}
-
 	public String getUpdatedAt(){
 		return updatedAt;
-	}
-
-	public int getProductId(){
-		return productId;
 	}
 
 	public String getSalesmanEmail(){
@@ -138,10 +111,6 @@ public  class  OrderListItem{
 		return orderTotalAmount;
 	}
 
-	public double getAmount(){
-		return amount;
-	}
-
 	public String getSalesmanCode(){
 		return salesmanCode;
 	}
@@ -166,10 +135,6 @@ public  class  OrderListItem{
 		return totalAmount;
 	}
 
-	public double getQty(){
-		return qty;
-	}
-
 	public String getDealerName(){
 		return dealerName;
 	}
@@ -190,28 +155,23 @@ public  class  OrderListItem{
  	public String toString(){
 		return 
 			"OrderListItem{" + 
-			"lr_upload = '" + lrUpload + '\'' + 
-			",product_option_title = '" + productOptionTitle + '\'' + 
+			"lr_upload = '" + lrUpload + '\'' +
 			",created_at = '" + createdAt + '\'' + 
 			",order_status = '" + orderStatus + '\'' + 
-			",order_tax_amount = '" + orderTaxAmount + '\'' + 
-			",order_ref_id = '" + orderRefId + '\'' + 
-			",updated_at = '" + updatedAt + '\'' + 
-			",product_id = '" + productId + '\'' + 
+			",order_tax_amount = '" + orderTaxAmount + '\'' +
+			",updated_at = '" + updatedAt + '\'' +
 			",salesman_email = '" + salesmanEmail + '\'' + 
 			",id = '" + id + '\'' + 
 			",sales_person_id = '" + salesPersonId + '\'' + 
 			",salesman_mobileno = '" + salesmanMobileno + '\'' + 
 			",dealer_id = '" + dealerId + '\'' + 
-			",order_total_amount = '" + orderTotalAmount + '\'' + 
-			",amount = '" + amount + '\'' + 
+			",order_total_amount = '" + orderTotalAmount + '\'' +
 			",salesman_code = '" + salesmanCode + '\'' + 
 			",saleman_name = '" + salemanName + '\'' + 
 			",due_date = '" + dueDate + '\'' + 
 			",tax = '" + tax + '\'' + 
 			",deleted_at = '" + deletedAt + '\'' + 
-			",total_amount = '" + totalAmount + '\'' + 
-			",qty = '" + qty + '\'' + 
+			",total_amount = '" + totalAmount + '\'' +
 			",dealer_name = '" + dealerName + '\'' + 
 			",invoice = '" + invoice + '\'' + 
 			",order_id = '" + orderId + '\'' + 

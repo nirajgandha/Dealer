@@ -15,7 +15,7 @@
     <string name="loading">Loading</string>
     <string name="otp_verification_title">OTP Verification</string>
     <string name="otp_description">OTP has been sent to your registered mobile number xx xxxxx x%s.\nPlease enter OTP below</string>
-    <string name="enter_your_number">Enter your number</string>
+    <string name="enter_your_number">ENTER YOUR NUMBER</string>
     <string name="str_submit">SUBMIT</string>
     <string name="menu_home">Home</string>
     <string name="menu_order">Order</string>
@@ -36,5 +36,6 @@
     <string name="cart">Cart</string>
     <string name="remove_from_cart">Are you sure you want to remove %s from your cart?</string>
     <string name="subtotal_s">Subtotal %s</string>
+    <string name="lr_uploaded_s">LR Uploaded: %s</string>
 
 </resources>
