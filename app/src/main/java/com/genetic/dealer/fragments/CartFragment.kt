@@ -113,6 +113,7 @@ class CartFragment: Fragment(), CartProductListener {
                     if (body != null) {
                         val meta = body.meta
                         if (meta.code.equals("200")) {
+                            (requireContext().applicationContext as DealerApplication).getProductCartList().clear()
                             val bundle = Bundle()
                             bundle.putString("orderId", body.data.orderList[0].orderId)
                             bundle.putString("amount", body.data.orderAmount.orderTotalAmount.toString())
@@ -159,7 +160,7 @@ class CartFragment: Fragment(), CartProductListener {
         Utils.showSnackBar(binding.root, string)
     }
 
-    override fun cartProductUpdates(key: String, value: CustomProductOptionModel?) {
+    override fun cartProductUpdates() {
         loadTotals()
     }
 

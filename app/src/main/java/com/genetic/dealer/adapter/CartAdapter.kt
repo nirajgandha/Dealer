@@ -48,7 +48,7 @@ class CartAdapter(private val cartProductListener: CartProductListener, private 
                     dialogBinding.btnCancel.setOnClickListener { dialog.dismiss() }
                     dialogBinding.btnOk.setOnClickListener {
                         removeItems(key)
-                        cartProductListener.cartProductUpdates("", null)
+                        cartProductListener.cartProductUpdates()
                         dialog.dismiss()
                     }
                     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -57,21 +57,18 @@ class CartAdapter(private val cartProductListener: CartProductListener, private 
                 } else {
                     (context.applicationContext as DealerApplication).getProductCartList().getValue(key).quantity -= 1
                     cartItemRecyclerLayoutBinding.qty.text = (context.applicationContext as DealerApplication).getProductCartList().getValue(key).quantity.toString()
-                    cartProductListener.cartProductUpdates(key,
-                        (context.applicationContext as DealerApplication).getProductCartList().getValue(key))
+                    cartProductListener.cartProductUpdates()
                 }
             }
             cartItemRecyclerLayoutBinding.btnPlus.setOnClickListener {
                 (context.applicationContext as DealerApplication).getProductCartList().getValue(key).quantity += 1
                 cartItemRecyclerLayoutBinding.qty.text = (context.applicationContext as DealerApplication).getProductCartList().getValue(key).quantity.toString()
-                cartProductListener.cartProductUpdates(key,
-                    (context.applicationContext as DealerApplication).getProductCartList().getValue(key))
+                cartProductListener.cartProductUpdates()
             }
 
             cartItemRecyclerLayoutBinding.delete.setOnClickListener {
                 removeItems(key)
-                cartProductListener.cartProductUpdates(key,
-                    (context.applicationContext as DealerApplication).getProductCartList().getValue(key))
+                cartProductListener.cartProductUpdates()
             }
             GlideApp.with(context).load(
                 (context.applicationContext as DealerApplication).getProductCartList().getValue(key).imageUrl)
