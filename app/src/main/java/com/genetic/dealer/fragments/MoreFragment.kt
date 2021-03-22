@@ -66,7 +66,9 @@ class MoreFragment : Fragment() {
                 R.string.menu_payment
             )
         ) }
-        binding.contact.setOnClickListener { openWebPage("http://18.222.76.43/delearapp/public/contact-us") }
+        binding.contact.setOnClickListener { (requireActivity() as MainActivity).openOtherFragment(
+            ContactUsFragment()
+        ) }
         binding.logout.setOnClickListener {
             preference!!.clearAllPreferenceData()
             (requireActivity() as MainActivity).recreate()

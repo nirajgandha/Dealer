@@ -276,8 +276,8 @@ class HomeFragment : Fragment() {
                         R.string.amount_s,
                         payment.totalAmount.toString()
                     ))
-                if (payment.createdAt.isNotEmpty()) {
-                    val split = payment.createdAt.split(" ")
+                if (payment.dueDate.isNotEmpty()) {
+                    val split = payment.dueDate.split(" ")
                     val date = split[0].split("-")
                     binding.paymentDueDashboardLayout1.paymentDate.text =
                         "${date[2]}-${date[1]}-${date[0]}"
@@ -301,8 +301,8 @@ class HomeFragment : Fragment() {
                         R.string.amount_s,
                         payment.totalAmount.toString()
                     ))
-                if (payment.createdAt.isNotEmpty()) {
-                    val split = payment.createdAt.split(" ")
+                if (payment.dueDate.isNotEmpty()) {
+                    val split = payment.dueDate.split(" ")
                     val date = split[0].split("-")
                     binding.paymentDueDashboardLayout1.paymentDate.text =
                         "${date[2]}-${date[1]}-${date[0]}"
@@ -325,8 +325,8 @@ class HomeFragment : Fragment() {
                         R.string.amount_s,
                         payment1.totalAmount.toString()
                     ))
-                if (payment1.createdAt.isNotEmpty()) {
-                    val split1 = payment1.createdAt.split(" ")
+                if (payment1.dueDate.isNotEmpty()) {
+                    val split1 = payment1.dueDate.split(" ")
                     val date1 = split1[0].split("-")
                     binding.paymentDueDashboardLayout2.paymentDate.text =
                         "${date1[2]}-${date1[1]}-${date1[0]}"
@@ -342,7 +342,7 @@ class HomeFragment : Fragment() {
                 }
             }
         }
-        binding.txtMorePlusRecentOrder.setOnClickListener {
+        binding.txtMorePlusPaymentHistory.setOnClickListener {
             (requireActivity() as MainActivity).onItemClick(resources.getString(R.string.menu_payment))
         }
     }

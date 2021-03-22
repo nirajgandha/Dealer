@@ -215,6 +215,9 @@ class MainActivity : AppCompatActivity(), ItemClickListener, NavigationDrawerIte
             is ChangePasswordFragment -> {
                 onItemClick(getString(R.string.menu_more))
             }
+            is ContactUsFragment -> {
+                onItemClick(getString(R.string.menu_more))
+            }
             else -> {
                 onItemClick(getString(R.string.menu_home))
             }

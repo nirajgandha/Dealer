@@ -165,6 +165,7 @@
                     android:text="@string/order_number"
                     android:textSize="@dimen/_12ssp"
                     android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     app:layout_constraintStart_toEndOf="@+id/round_img_layout"
                     app:layout_constraintTop_toTopOf="@+id/round_img_layout"/>
 
